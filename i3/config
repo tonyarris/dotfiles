@@ -224,6 +224,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 # custom app workspaces
 assign [class="Gnome-terminal"] $ws1
+assign [class="Alacritty"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="libreoffice"] $ws5
 assign [class="Evince"] $ws5
