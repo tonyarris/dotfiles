@@ -117,7 +117,7 @@ set $ws4 "4: Comms"
 set $ws5 "5: Study"
 set $ws6 "6: Nautilus"
 set $ws7 "7: Music"
-set $ws8 "8"
+set $ws8 "8: Boxes"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -236,3 +236,4 @@ assign [class="Thunderbird"] $ws4
 assign [class="Org.gnome.Nautilus"] $ws6
 assign [class="Matplotlib"] $ws5
 assign [class="Spotify"] $ws7
+assign [class="Gnome-boxes"] $ws8
