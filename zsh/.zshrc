@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Add to PATH
 export PATH=/home/tony/anaconda3/bin:$PATH
+export PATH=/home/tony/go/bin:$PATH
 
 # Virtualenvwrapper things
 export WORKON_HOME=$HOME/.virtualenvs
@@ -121,3 +122,15 @@ export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 precmd() { eval "$PROMPT_COMMAND" }
 export PROMPT_COMMAND="pwd > /tmp/whereami"
 
+# go
+export PATH=$PATH:/usr/local/go/bin
+
+# add ~fmac's corylus prompt
+PS1='$(corylus \
+		"[" hostname "] " \
+			"\033[34m" username "\033[0m " \
+				"\033[31m $? \033[0m " \
+					"\033[35m" cwd "\033[0m " \
+						"[" cwd-count " files] " \
+							"[" time-unix "]" \
+								tail)'
