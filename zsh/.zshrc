@@ -75,6 +75,8 @@ plugins=(git
 	)
 
 source $ZSH/oh-my-zsh.sh
+unalias gau 
+alias testbox='ssh -i /home/tony/.ssh/th_tuxedo_eu.pem ubuntu@15.161.152.88'
 
 # User configuration
 
@@ -105,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # Add to PATH
 export PATH=/home/tony/anaconda3/bin:$PATH
 export PATH=/home/tony/go/bin:$PATH
+export PYTHONPATH=/home/tony/anaconda3/lib/python3.8/site-packages
+export PATH=$HOME/dotnet:$PATH
 
 # Virtualenvwrapper things
 export WORKON_HOME=$HOME/.virtualenvs
@@ -133,4 +137,17 @@ PS1='$(corylus \
 					"\033[35m" cwd "\033[0m " \
 						"[" cwd-count " files] " \
 							"[" time-unix "]" \
-								tail)'
+tail)'
+
+# Add dotnet root
+export DOTNET_ROOT=$HOME/dotnet
+
+# Disable screen save
+xset -dpms s off
+
+# mullvad alias
+alias mullvadc="mullvad connect"
+alias mullvadd="mullvad disconnect"
+
+# scan wifi channels
+alias wifiscan="sudo iwlist wlp64s0 scan | grep Frequency | sort | uniq -c | sort -n"
